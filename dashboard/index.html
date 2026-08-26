@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NorthStar Commerce | Executive brief</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#overview" aria-label="NorthStar Commerce home">
+        <span class="brand-mark">N</span>
+        <span><strong>NorthStar</strong><small>commerce intelligence</small></span>
+      </a>
+      <div class="topbar-meta"><span class="status-dot"></span> Reporting window <strong>Sep 2016 - Aug 2018</strong></div>
+    </header>
+
+    <main>
+      <section class="intro" id="overview">
+        <div>
+          <p class="eyebrow">Executive brief / 01</p>
+          <h1>Growth is healthy.<br><em>Retention is the lever.</em></h1>
+          <p class="lede">A focused read on sales, customer behavior, and delivery performance across the Olist marketplace.</p>
+        </div>
+        <div class="intro-note"><span class="note-index">01</span><p>Only <strong>3.12%</strong> of customers returned for another order. The next growth story is likely to come from keeping the customers already won.</p></div>
+      </section>
+
+      <nav class="section-nav" aria-label="Dashboard sections">
+        <a class="active" href="#overview">Overview</a><a href="#categories">Categories</a><a href="#delivery">Delivery</a>
+        <span class="source-label">Source: PostgreSQL reporting views</span>
+      </nav>
+
+      <section class="kpi-grid" aria-label="Executive KPIs">
+        <article class="kpi-card accent-coral"><span class="kpi-label">Merchandise value</span><strong id="kpi-value">--</strong><span class="kpi-foot">product sales before freight</span></article>
+        <article class="kpi-card"><span class="kpi-label">Orders</span><strong id="kpi-orders">--</strong><span class="kpi-foot">across the marketplace</span></article>
+        <article class="kpi-card"><span class="kpi-label">Average order value</span><strong id="kpi-aov">--</strong><span class="kpi-foot">merchandise value per order</span></article>
+        <article class="kpi-card accent-mint"><span class="kpi-label">On-time delivery</span><strong id="kpi-ontime">--</strong><span class="kpi-foot">of 96,470 eligible deliveries</span></article>
+      </section>
+
+      <section class="story-grid">
+        <article class="panel trend-panel">
+          <div class="panel-heading"><div><p class="eyebrow">Sales rhythm</p><h2>Merchandise value over time</h2></div><span class="callout" id="trend-callout">--</span></div>
+          <div class="chart-wrap"><canvas id="trend-chart" aria-label="Monthly merchandise value chart"></canvas></div>
+          <div class="axis-labels"><span>Sep 2016</span><span>Aug 2018</span></div>
+        </article>
+        <article class="panel signal-panel">
+          <p class="eyebrow">What stands out</p><h2>Momentum, with a retention gap</h2>
+          <div class="signal"><span class="signal-number">01</span><div><strong>November 2017 was the peak month</strong><p id="peak-copy">--</p></div></div>
+          <div class="signal"><span class="signal-number">02</span><div><strong>São Paulo carries the business</strong><p id="state-copy">--</p></div></div>
+          <div class="signal"><span class="signal-number">03</span><div><strong>Delivery is strong, but uneven</strong><p>91.89% arrived on time overall; the gap between the strongest and weakest large-state results is material.</p></div></div>
+        </article>
+      </section>
+
+      <section class="content-grid" id="categories">
+        <article class="panel category-panel">
+          <div class="panel-heading"><div><p class="eyebrow">Product mix</p><h2>Where value comes from</h2></div><button class="text-button" id="category-sort" type="button">Sort by units <span>↕</span></button></div>
+          <div id="category-list" class="bar-list" aria-live="polite"></div>
+        </article>
+        <article class="panel state-panel">
+          <div class="panel-heading"><div><p class="eyebrow">Geography</p><h2>State contribution</h2></div><span class="small-caption">merchandise value</span></div>
+          <div id="state-list" class="state-list" aria-live="polite"></div>
+        </article>
+      </section>
+
+      <section class="content-grid" id="delivery">
+        <article class="panel delivery-panel">
+          <div class="panel-heading"><div><p class="eyebrow">Operations</p><h2>Delivery performance by month</h2></div><span class="legend"><i class="legend-mint"></i>On time <i class="legend-coral"></i>Average days</span></div>
+          <div class="delivery-chart" id="delivery-chart"></div>
+        </article>
+        <article class="panel takeaway-panel">
+          <p class="eyebrow">Decision cue</p><h2>Protect the customer experience where distance shows up.</h2>
+          <p>São Paulo averages 8.76 delivery days and 94.11% on-time. Alagoas averages 24.54 days and 76.07% on-time among states with at least 100 eligible orders.</p>
+          <div class="takeaway-rule"></div><span class="small-caption">Scope: delivered orders with valid timestamps</span>
+        </article>
+      </section>
+    </main>
+
+    <footer><span>NorthStar Commerce Analytics</span><span>Prepared from 99,441 orders</span></footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

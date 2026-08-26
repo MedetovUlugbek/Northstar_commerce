@@ -1,0 +1,121 @@
+      table_name      | row_count 
+----------------------+-----------
+ category_translation |        71
+ customers            |     99441
+ order_items          |    112650
+ orders               |     99441
+ payments             |    103886
+ products             |     32951
+(6 rows)
+
+ total_customers | missing_unique_customer_id | missing_city | missing_state 
+-----------------+----------------------------+--------------+---------------
+           99441 |                          0 |            0 |             0
+(1 row)
+
+ total_orders | missing_customer_id | missing_order_status | missing_purchase_timestamp | missing_delivery_date | missing_estimated_delivery_date 
+--------------+---------------------+----------------------+----------------------------+-----------------------+---------------------------------
+        99441 |                   0 |                    0 |                          0 |                  2965 |                               0
+(1 row)
+
+ total_products | missing_category | missing_weight | missing_length | missing_height | missing_width 
+----------------+------------------+----------------+----------------+----------------+---------------
+          32951 |              610 |              2 |              2 |              2 |             2
+(1 row)
+
+ total_order_items | missing_product_id | missing_seller_id | missing_price | missing_freight_value 
+-------------------+--------------------+-------------------+---------------+-----------------------
+            112650 |                  0 |                 0 |             0 |                     0
+(1 row)
+
+ total_payments | missing_payment_type | missing_installments | missing_payment_value 
+----------------+----------------------+----------------------+-----------------------
+         103886 |                    0 |                    0 |                     0
+(1 row)
+
+ orders_without_matching_customer 
+----------------------------------
+                                0
+(1 row)
+
+ order_items_without_matching_order 
+------------------------------------
+                                  0
+(1 row)
+
+ order_items_without_matching_product 
+--------------------------------------
+                                    0
+(1 row)
+
+ payments_without_matching_order 
+---------------------------------
+                               0
+(1 row)
+
+ negative_prices | negative_freight_values | zero_price_items 
+-----------------+-------------------------+------------------
+               0 |                       0 |                0
+(1 row)
+
+ negative_payment_values | negative_installments | zero_installment_payments 
+-------------------------+-----------------------+---------------------------
+                       0 |                     0 |                         2
+(1 row)
+
+ negative_weight | negative_length | negative_height | negative_width 
+-----------------+-----------------+-----------------+----------------
+               0 |               0 |               0 |              0
+(1 row)
+
+ approval_before_purchase 
+--------------------------
+                        0
+(1 row)
+
+ carrier_date_before_purchase 
+------------------------------
+                          166
+(1 row)
+
+ delivery_before_purchase 
+--------------------------
+                        0
+(1 row)
+
+ customer_delivery_before_carrier 
+----------------------------------
+                               23
+(1 row)
+
+ delivered_orders_missing_delivery_date 
+----------------------------------------
+                                      8
+(1 row)
+
+ order_status | total_orders 
+--------------+--------------
+ delivered    |        96478
+ shipped      |         1107
+ canceled     |          625
+ unavailable  |          609
+ invoiced     |          314
+ processing   |          301
+ created      |            5
+ approved     |            2
+(8 rows)
+
+ payment_type | total_payments | total_payment_value 
+--------------+----------------+---------------------
+ credit_card  |          76795 |         12542084.19
+ boleto       |          19784 |          2869361.27
+ voucher      |           5775 |           379436.87
+ debit_card   |           1529 |           217989.79
+ not_defined  |              3 |                0.00
+(5 rows)
+
+ categories_without_translation |               missing_category_translation               
+--------------------------------+----------------------------------------------------------
+                              2 | {pc_gamer,portateis_cozinha_e_preparadores_de_alimentos}
+(1 row)
+
